@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
+   // implementation(libs.androidx.core-ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
@@ -46,9 +46,17 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation("androidx.compose.material:material-icons-extended")
     
+    // Navigation and MVVM
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    
+    // WorkManager for background tasks
+    implementation("androidx.work:work-runtime-ktx:2.11.2")
+    
     // Glance for App Widgets
     implementation(libs.androidx.glance.appwidget)
     implementation(libs.androidx.glance.material3)
+   // implementation(libs.navigation.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
